@@ -1,2 +1,2 @@
-# cs61a
-cs, cs61a,
+# learn cs61a
+### contains homeworkd, lab, exams, and my note
