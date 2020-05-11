@@ -1,48 +1,27 @@
 #links https://cs61a.org/lab/sol-lab01/
-def xk(c, d):
- if c == 4:
-    return 6
- elif d >= 4:
-    return 6 + 7 + c
- else:
-    return 25 
 
-assert xk(10, 10) == 23, "result should be 23"
-assert xk(10, 6) == 23, "result should be 19"
-assert xk(4, 6) == 6, "result should be 6"
-assert xk(0, 0) == 25, "result should be 25"
+# coding practice part
 
+# Q7: Falling Factorial
+def falling(n, k):
+    total, stop = 1, n-k
+    while n > stop:
+        total, n = total*n, n-1
+    return total
 
-
-def how_big(x):
-    if x > 10:
-        print('huge')
-    elif x > 5:
-        return 'big'
-    elif x > 0:
-        print('small')
-    else:
-        print("nothin'")
-
-#  how_big(7) -> return 'big'
-# >>> how_big(12) -> output 'huge'
-# >>> how_big(1) -> output 'small'
-# >>> how_big(-1) -> output 'nothin'
+# Q8 Double Eights
+def double_eights(n):
+    prev_eight = False
+    while n > 0:
+        last_digit = n % 10
+        if last_digit == 8 and prev_eight:
+            return True
+        elif last_digit == 8:
+            prev_eight = True
+        else:
+            prev_eight = False
+        n = n // 10
+    return False
 
 
-n = 3
-while n >= 0:
-    n -= 1
-    """
-      2->1->0
-    """
-    print(n)
 
-positive = 28
-while positive:
-  """
-   28->25->22->19->16->13->10->7->4->1
-   >>> 
-  """
-  print("positive?", positive)
-  positive -= 3
