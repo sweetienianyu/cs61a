@@ -1,6 +1,7 @@
-def print_all(x):
+def print_sums(x):
     print(x)
-    return print_all
-  
+    def next_sum(y):
+        return print_sums(x + y)
+    return next_sum
 
-print_all(5)(3)(1)
+print_sums(1)(3)(5)
