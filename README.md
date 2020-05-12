@@ -36,3 +36,14 @@ def print_sums(x):
 
 print_sums(1)(3)(5)
 ```
+
+### return
+```
+def square(x):
+    return x * x
+    
+def invert(f):
+    return lambda y: search(lambda x: f(x) == y)
+sqrt = invert(square)
+sqrt(16)
+```
