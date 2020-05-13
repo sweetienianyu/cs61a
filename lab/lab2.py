@@ -1,3 +1,6 @@
 # coding practice part
 
-def lambda_curry2(func):
+higher_order_lambda = lambda f: lambda x: f(x)
+g = lambda x: x * x
+higher_order_lambda(g)(2)
+

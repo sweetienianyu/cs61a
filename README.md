@@ -1,6 +1,11 @@
 # learn cs61a
 ### contains homeworkd, lab, exams, and my note
-
+### high order function
+```
+higher_order_lambda = lambda f: lambda x: f(x)
+g = lambda x: x * x
+higher_order_lambda(g)(2)
+```
 ### how to compose functions
 ```
 def make_adder(n):
